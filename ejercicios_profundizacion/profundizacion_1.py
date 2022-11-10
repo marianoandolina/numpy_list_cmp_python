@@ -27,10 +27,29 @@ que ya dispongamos de Python. El objetivo es:
         la suma y los números recoletados
     b) Si el número es mayor a 21 se debe informar al usuario que perdio
 '''
+import random
+import numpy as np
+
 
 if __name__ == '__main__':
     print('Comenzamos a divertirnos!')
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+
+    lista_numeros = [random.randint(1, 10) for x in range(3)]
+    l1 = np.asanyarray(lista_numeros)
+    l1_suma = np.sum(l1)
+
+    print(l1)
+
+    if l1_suma <= 21:
+        print(f'La suma de {l1} es {l1_suma}')
+    else:
+        print('Perdiste el Juego')
+
+    
+    
+    
+
 
     print("terminamos")
