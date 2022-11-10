@@ -40,8 +40,6 @@ if __name__ == '__main__':
     l1 = np.asanyarray(lista_numeros)
     l1_suma = np.sum(l1)
 
-    print(l1)
-
     if l1_suma <= 21:
         print(f'La suma de {l1} es {l1_suma}')
     else:
