@@ -18,7 +18,7 @@ Dado una lista de nombres de personas "nombres" se desea
 obtener una nueva lista filtrada que llamaremos "nombres_filtrados"
 La lista se debe filtrar por comprensión de listas utilizando la
 lista "padron" como parámetro.
-La lista filtrada sodo deberá tener aquellos nombres que empiecen
+La lista filtrada solo deberá tener aquellos nombres que empiecen
 con alguna de las letras aceptadas en el "padron".
 
 TIP: Debe acceder a la primera letra de cada nombre de la lista nombres
@@ -41,6 +41,21 @@ if __name__ == '__main__':
 
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+
+    #BUCLE CLASICO
+
+    nombres_filtrados_1 = []
+
+    for nombre in nombres:
+        if nombre[0] in padron:
+            nombres_filtrados_1.append(nombre)
+
+    print(nombres_filtrados_1)
+
+    #COMPRENSION DE LISTAS
+
+    nombres_filtrados = [x for x in nombres if x[0] in padron]
+    print(nombres_filtrados)
 
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
